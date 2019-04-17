@@ -8,6 +8,8 @@
 
 - Excute SBCL with Windows Powershell, using `sbcl --script .\<filename>.lsp`
 
+- The code is uploaded on [Github](https://github.com/hangalice2156), if any error occurs, you can contact me here.
+
 * Note that `End Of File(EOF)` in Windows can be send by `ctrl+z` instead of `ctrl+d` in Linux.
     
     * Also, for each EOF signal, you have to press `enter` in Windows due to "blocking IO method"
@@ -45,13 +47,14 @@ I just use `(print <function>)` to show the result on terminal. Feel free to mod
     - the following input is the content in the list.
 
 - code explain:
-    -first of all, we need a `single` function to judge if a list contains only one atom
+
+    - first of all, we need a `single` function to judge if a list contains only one atom.
     
         - the `consp` funcion is used to judge if the input is a `Cons` object
         
-            * if yes, then check if the sequence contains only 1 atom, and return the result.
+            - if yes, then check if the sequence contains only 1 atom, and return the result.
         
-            * this function will be used for slicing the input sequence
+            - this function will be used for slicing the input sequence
 
     - then in the mergesort function, use the `single` and `null` function to judge if the sequence is sliced.
 
@@ -70,7 +73,11 @@ I just use `(print <function>)` to show the result on terminal. Feel free to mod
         - after all merged, return the merged sequence. then the job is done.
 
 - exameple input and output:
+
 > Programming_Language_Homework\HW1_F74056328> sbcl --script .\mergesort.lsp
+
 5
+
 6 5 3 0 4
+
 0 3 4 5 6
