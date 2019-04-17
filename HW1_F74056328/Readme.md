@@ -37,3 +37,40 @@ I just use `(print <function>)` to show the result on terminal. Feel free to mod
     - the tail recursion method is quite similar to iteration method, the number we want is computed through the recursion call
 
 ### Problem 2
+- filename: mergesort.lsp
+    - usage: use `sbcl --script .\mergesort.lsp` in command line.
+    
+    - the first input number meaning the total items in the list.
+
+    - the following input is the content in the list.
+
+- code explain:
+    -first of all, we need a `single` function to judge if a list contains only one atom
+    
+        - the `consp` funcion is used to judge if the input is a `Cons` object
+        
+            * if yes, then check if the sequence contains only 1 atom, and return the result.
+        
+            * this function will be used for slicing the input sequence
+
+    - then in the mergesort function, use the `single` and `null` function to judge if the sequence is sliced.
+
+        - if not, cut in half and recursive call the mergesort function.
+
+        - if sliced, then we can start `merge` the sequence.
+
+            - the `merge` function is self provided by common lisp itself.
+            
+            - the first argument means their type. 
+            
+            - the second and the third means the input sequence. 
+            
+            - the fourth means their comparing method
+
+        - after all merged, return the merged sequence. then the job is done.
+
+- exameple input and output:
+> Programming_Language_Homework\HW1_F74056328> sbcl --script .\mergesort.lsp
+5
+6 5 3 0 4
+0 3 4 5 6
