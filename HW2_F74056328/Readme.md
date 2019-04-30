@@ -16,7 +16,7 @@
 
 ### Getting url and request
 
-- First of all, I tried to figure out rule for the url
+First of all, I tried to figure out rule for the url
 
 Query the example given by TAs, the url is 
 
@@ -58,6 +58,14 @@ Note that in python code, it should be `[\\s\\S]*?` or the pylint will regard it
 
 - finally, use matplotlib to show the result.
 
-### 
+### As for going thorugh pages
+
+While searching, we can find `Showing 51–63 of 63 results for all: Ian Goodfellow` on the page, we can find total results here
+
+Just similar to how we parse the content, using `re.findall(<pattern>)` can do the job
+
+Note that in `Showing 51–63 of`, the `–` is not `-` which is the normal dash we think.
+
+And also, in my system, `–` is regarded as `&ndash;`. So I just use `[\\s\\S]*?` instead of `[0-9|–|,]`
 
 
