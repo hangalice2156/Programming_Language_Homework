@@ -68,4 +68,13 @@ Note that in `Showing 51–63 of`, the `–` is not `-` which is the normal dash
 
 And also, in my system, `–` is regarded as `&ndash;`. So I just use `[\\s\\S]*?` instead of `[0-9|–|,]`
 
+### Getting author for each article
 
+- Just the same as above, parseing the author and split them from html.
+
+In this program, 
+I just show the result because there might be another person 
+that sign different name in article but the same person.
+
+- For another example: "Stephen Hawking" and "Stephen W. Hawking" and "Stephen William Hawking" 
+is the same but my program shows every of them separately
